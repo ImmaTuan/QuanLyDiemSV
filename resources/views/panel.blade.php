@@ -2,29 +2,53 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý điểm sinh viên - Admin Panel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ secure_asset('css/panel.css') }}">
+    <title>Bảng điều khiển</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ asset('css/panel.css') }}">
 </head>
 <body>
-    <div class="sidebar">
-        <h4>Quản Lý Điểm</h4>
-        <a href="#"> Trang chủ</a>
-        <a href="#"> Sinh viên</a>
-        <a href="#"> Môn học</a>
-        <a href="#"> Điểm</a>
-        <a href="{{ route('logout') }}"> Đăng xuất</a>
-    </div>
+    <div class="panel-container">
+        <div class="header">
+            <h2>Xin chào, {{ $user->name }}</h2>
+            <a href="{{ route('logout') }}" class="logout-btn">Đăng xuất</a>
+        </div>
 
-    <div class="content">
-        <nav class="navbar">
-            <span>Xin chào, <strong>{{ $user->name ?? 'Admin' }}</strong></span>
-        </nav>
+        <div class="info-box">
+            <h3>Thông tin cá nhân</h3>
+            <ul>
+                <li><strong>Vai trò:</strong> 
+                    @if ($user->role === 'student')
+                        Sinh viên
+                    @elseif ($user->role === 'teacher')
+                        Giảng viên
+                    @else
+                        Không xác định
+                    @endif
+                </li>
 
-        <div class="container">
-            <h3>Hệ thống quản lý điểm sinh viên</h3>
-            <p>Chọn mục bên trái để bắt đầu.</p>
+                @if ($user->MaSV)
+                    <li><strong>Mã sinh viên:</strong> {{ $user->MaSV }}</li>
+                @endif
+
+                @if ($user->MaGV)
+                    <li><strong>Mã giảng viên:</strong> {{ $user->MaGV }}</li>
+                @endif
+
+                <li><strong>Email:</strong> {{ $user->email }}</li>
+
+                @if ($user->class_id && $user->class)
+                    <li><strong>Lớp:</strong> {{ $user->class->name }}</li>
+                @endif
+            </ul>
+        </div>
+
+        <div class="action-box">
+            <h3>Chức năng</h3>
+            <div class="btn-group">
+                <a href="#" class="btn">Xem nhóm</a>
+                <a href="{{ route('scores.index') }}" class="btn">Xem điểm</a>
+                <a href="#" class="btn">Cập nhật thông tin</a>
+            </div>
         </div>
     </div>
 </body>

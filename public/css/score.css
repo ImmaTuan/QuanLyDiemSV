@@ -1,0 +1,140 @@
+/* ====== BẢNG ĐIỂM CHUNG ====== */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.panel-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1a73e8;
+}
+
+/* ====== BẢNG CHUNG ====== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px 12px;
+}
+
+thead {
+    background: #1a73e8;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+tbody tr:hover {
+    background: #e8f0fe;
+    transition: 0.2s ease;
+}
+
+/* ====== LIÊN KẾT QUAY LẠI ====== */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ====== BẢNG ĐIỂM SINH VIÊN ====== */
+.student-score h2 {
+    color: #0b8043;
+}
+
+.student-score table thead {
+    background: #0b8043;
+}
+
+.student-score td {
+    font-size: 15px;
+    color: #333;
+}
+
+.student-score tbody tr:hover {
+    background: #e6f4ea;
+}
+
+/* ====== BẢNG ĐIỂM GIẢNG VIÊN ====== */
+.teacher-score h2 {
+    color: #d93025;
+}
+
+.teacher-score table thead {
+    background: #d93025;
+}
+
+.teacher-score a.edit-btn {
+    background: #1a73e8;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.teacher-score a.edit-btn:hover {
+    background: #155ab6;
+}
+
+.teacher-score .filter-box {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.teacher-score select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* ====== THÔNG BÁO ====== */
+.alert {
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.alert-success {
+    background: #e6f4ea;
+    color: #0b8043;
+    border-left: 5px solid #0b8043;
+}
+
+.alert-error {
+    background: #fce8e6;
+    color: #d93025;
+    border-left: 5px solid #d93025;
+}

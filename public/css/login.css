@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,27 +9,32 @@ body {
 
 form {
     background: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 25px 30px;
+    border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 300px;
+    width: 320px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 input {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
+    padding: 10px;
+    margin: 8px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 button {
     width: 100%;
+    padding: 10px;
     background: #007bff;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -37,7 +42,19 @@ button:hover {
     background: #0056b3;
 }
 
-.error {
-    color: red;
+.alert {
     text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.alert-danger {
+    background: #ffdddd;
+    color: #a94442;
+}
+
+.alert-success {
+    background: #ddffdd;
+    color: #3c763d;
 }

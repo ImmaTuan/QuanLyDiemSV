@@ -17,33 +17,35 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
+            'email' => 'required',
             'password' => 'required'
         ]);
 
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)
+                    ->orWhere('MaSV', $request->email)
+                    ->orWhere('MaGV', $request->email)
+                    ->first();
 
         if ($user && Hash::check($request->password, $user->password)) {
-            session(['user' => $user->name]);
+            Auth::login($user);
             return redirect('/panel');
         }
 
-        return back()->with('error', 'Sai email hoặc mật khẩu!');
+        return back()->with('error', 'Sai thông tin đăng nhập!');
     }
 
     public function panel()
-{
-    $user = session('user');
-    if (!$user) {
-        return redirect('/');
-    }
-    return view('panel', ['user' => $user]);
-}
+    {
+        if (!Auth::check()) {
+            return redirect('/')->with('error', 'Bạn chưa đăng nhập.');
+        }
 
+        return view('panel', ['user' => Auth::user()]);
+    }
 
     public function logout()
     {
-        session()->flush();
+        Auth::logout();
         return redirect('/')->with('message', 'Đã đăng xuất.');
     }
 }
