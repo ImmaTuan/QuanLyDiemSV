@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Quản lý điểm sinh viên</title>
-    {{-- <link rel="stylesheet" href="{{ auto_asset('css/score.css') }}"> --}}
-    <link rel="stylesheet" href="{{ secure_asset('css/score.css') }}">
+    <link rel="stylesheet" href="{{ auto_asset('css/score.css') }}">
+    {{-- <link rel="stylesheet" href="{{ secure_asset('css/score.css') }}"> --}}
 </head>
 <body>
     <div class="panel-container">
