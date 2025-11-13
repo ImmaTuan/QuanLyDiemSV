@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Bảng điều khiển</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('css/panel.css') }}">
+    <link rel="stylesheet" href="{{ auto_asset('css/panel.css') }}">
 </head>
 <body>
     <div class="panel-container">

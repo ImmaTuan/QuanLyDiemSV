@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sửa điểm</title>
-    <link rel="stylesheet" href="{{ asset('css/score.css') }}">
+    <link rel="stylesheet" href="{{ auto_asset('css/score.css') }}">
 </head>
 <body>
     <h2>Sửa điểm cho {{ $score->student->name }}</h2>

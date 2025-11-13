@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Điểm của tôi</title>
-    <link rel="stylesheet" href="{{ asset('css/score.css') }}">
+    <link rel="stylesheet" href="{{ auto_asset('css/score.css') }}">
 </head>
 <body>
     <div class="panel-container">
