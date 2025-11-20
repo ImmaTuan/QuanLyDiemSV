@@ -20,7 +20,12 @@ return new class extends Migration
             $table->foreignId('teacher_id')->constrained('users')->onDelete('cascade'); 
             $table->timestamps();
         });
+        Schema::table('subjects', function (Blueprint $table) {
+        $table->string('maMh')->unique()->change();
+        });
     }
+  
+
 
     /**
      * Reverse the migrations.

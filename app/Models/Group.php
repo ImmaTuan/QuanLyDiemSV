@@ -10,6 +10,8 @@ class Group extends Model
     use HasFactory;
 
     protected $fillable = [
+        'name',
+        'maMh',
         'MaNhom',
         'tenNhom',
         'hocky',
@@ -24,4 +26,9 @@ class Group extends Model
     {
         return $this->hasMany(Group_detail::class, 'group_id');
     }
+    public function subject()
+{
+    return $this->belongsTo(Subject::class, 'maMh', 'maMh');
+}
+
 }

@@ -30,7 +30,7 @@
                 <tr>
                     <th>Sinh viên</th>
                     <th>Môn học</th>
-                    <th>Học kỳ</th>
+
                     <th>Điểm GK</th>
                     <th>Điểm CK</th>
                     <th>Hành động</th>
@@ -41,7 +41,7 @@
                     <tr>
                         <td>{{ $score->student->name ?? 'Không rõ' }}</td>
                         <td>{{ $score->subject->tenMh ?? 'Không rõ' }}</td>
-                        <td>{{ $score->hocKy }}</td>
+
                         <td>{{ $score->diemgk }}</td>
                         <td>{{ $score->diemck }}</td>
                         <td>

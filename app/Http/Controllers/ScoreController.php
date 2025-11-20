@@ -15,13 +15,15 @@ class ScoreController extends Controller
         $user = Auth::user();
 
         // --- Nếu là sinh viên ---
-        if ($user->role === 'student') {
-            $scores = Score::with('subject')
-                ->where('user_id', $user->id)
-                ->get();
+    if ($user->role === 'student') {
+      $scores = Score::with(['subject.term'])
+    ->where('user_id', $user->id)
+    ->get();
 
-            return view('students.score', compact('user', 'scores'));
-        }
+
+     return view('students.score', compact('user', 'scores'));
+    }
+
 
         // --- Nếu là giảng viên ---
         if ($user->role === 'teacher') {

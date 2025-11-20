@@ -21,13 +21,23 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        $user = User::where('email', $request->email)
-                    ->orWhere('MaSV', $request->email)
-                    ->orWhere('MaGV', $request->email)
+        $loginInput = $request->email; // email hoặc userId
+
+        // Tìm user theo email hoặc userId
+        $user = User::where('email', $loginInput)
+                    ->orWhere('userId', $loginInput)
                     ->first();
 
+        // Kiểm tra mật khẩu
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user);
+
+            // Điều hướng theo vai trò
+            if ($user->role === 'admin') {
+            return redirect()->route('admin.dashboard');
+           }
+
+
             return redirect('/panel');
         }
 
@@ -40,7 +50,9 @@ class AuthController extends Controller
             return redirect('/')->with('error', 'Bạn chưa đăng nhập.');
         }
 
-        return view('panel', ['user' => Auth::user()]);
+        return view('panel', [
+            'user' => Auth::user()
+        ]);
     }
 
     public function logout()
@@ -49,3 +61,4 @@ class AuthController extends Controller
         return redirect('/')->with('message', 'Đã đăng xuất.');
     }
 }
+
