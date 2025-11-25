@@ -1,0 +1,196 @@
+/* ===== RESET ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+/* ===== TIÊU ĐỀ ===== */
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* ===== NÚT QUAY LẠI (GÓC PHẢI) ===== */
+.back-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    text-decoration: none;
+    background: #888;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.back-btn:hover {
+    background: #666;
+}
+.back-btn {
+    display: inline-block;
+    float: right;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    background: #ff0000;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: #ddd;
+}
+/* ===== FORM ===== */
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form input,
+form select {
+    padding: 8px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+form button {
+    background: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+form button:hover {
+    background: #134eb6;
+}
+
+/* ===== BẢNG ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th {
+    background: #2266dd;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+table tr:hover {
+    background: #f2f6ff;
+}
+
+/* ===== NÚT XOÁ ===== */
+.btn-delete {
+    background: #e53935 !important;
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.btn-delete:hover {
+    background: #c62828 !important;
+}
+
+/* ===== NÚT SỬA ===== */
+.btn-edit {
+    background: #f9a825;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.btn-edit:hover {
+    background: #d68910;
+}
+
+/* ===== HÀNG EDIT HIỆN/ẨN ===== */
+.edit-row {
+    background: #fdfdfd;
+}
+
+.edit-row form {
+    text-align: left;
+    padding: 10px 0;
+}
+/* Nút sửa */
+.btn-edit {
+    background: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-edit:hover {
+    background: #0056b3;
+}
+/* ====== THÔNG BÁO ====== */
+.alert {
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    width: fit-content;
+    min-width: 250px;
+    max-width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.3s ease;
+}
+
+.alert-success {
+    background: #d4edda;
+    border: 1px solid #84c79c;
+    color: #276738;
+}
+
+.alert-error {
+    background: #f8d7da;
+    border: 1px solid #e29aa1;
+    color: #7b1a28;
+}
+
+/* Animation nhỏ cho đẹp */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

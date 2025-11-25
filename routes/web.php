@@ -29,13 +29,20 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::post('/admin/terms', [AdminTermController::class, 'store'])->name('admin.terms.store');
 
     Route::get('/admin/subjects', [AdminSubjectController::class, 'index'])->name('admin.subjects');
-    Route::post('/admin/subjects', [AdminSubjectController::class, 'store'])->name('admin.subjects.store');
+    Route::post('/admin/subjects/store', [AdminSubjectController::class, 'store'])->name('admin.subjects.store');
+    Route::put('/admin/subjects/{id}/update', [AdminSubjectController::class, 'update'])->name('admin.subjects.update');
+    Route::delete('/admin/subjects/{id}/delete', [AdminSubjectController::class, 'delete'])->name('admin.subjects.delete');
 
     Route::get('/admin/groups', [AdminGroupController::class, 'index'])->name('admin.groups');
     Route::post('/admin/groups/add-student', [AdminGroupController::class, 'addStudent'])->name('admin.groups.addStudent');
+    Route::delete('/admin/groups/delete/{id}', [AdminGroupController::class, 'delete'])->name('admin.groups.delete');
+    Route::put('/admin/groups/{id}/update', [AdminGroupController::class, 'update'])->name('admin.groups.update');
 
     Route::get('/admin/assign', [AdminAssignController::class, 'index'])->name('admin.assign');
-    Route::post('/admin/assign', [AdminAssignController::class, 'store']);
+    Route::post('/admin/assign/store', [AdminAssignController::class, 'store'])->name('admin.assign.store');
+    Route::get('/admin/assign/{id}/edit', [AdminAssignController::class, 'edit'])->name('admin.assign.edit');
+    Route::put('/admin/assign/{id}/update', [AdminAssignController::class, 'update'])->name('admin.assign.update');
+    Route::delete('/admin/assign/{id}/delete', [AdminAssignController::class, 'delete'])->name('admin.assign.delete');
 
 
 

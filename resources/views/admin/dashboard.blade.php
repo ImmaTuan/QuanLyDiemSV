@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="{{ auto_asset('css/admin.css') }}">
+    <link rel="stylesheet" href="{{ auto_asset('css/admindashboard.css') }}">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
     <h2>Quản trị hệ thống</h2>
 
     <ul>
-        <li><a href="{{ route('admin.terms') }}">Quản lý năm học - học kỳ</a></li>
+        {{-- <li><a href="{{ route('admin.terms') }}">Quản lý năm học - học kỳ</a></li> --}}
         <li><a href="{{ route('admin.subjects') }}">Quản lý môn học</a></li>
         <li><a href="{{ route('admin.assign') }}">Phân công giảng viên</a></li>
         <li><a href="{{ route('admin.groups') }}">Phân lớp / nhóm học</a></li>
