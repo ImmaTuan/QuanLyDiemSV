@@ -138,3 +138,58 @@ a:hover {
     color: #d93025;
     border-left: 5px solid #d93025;
 }
+.btn-edit {
+    padding: 5px 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background: #2980b9;
+}
+
+.btn-save {
+    padding: 5px 14px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background: #1e874b;
+}
+
+.btn-cancel {
+    padding: 5px 14px;
+    background: #7f8c8d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background: #646f72;
+}
+
+.back-btn {
+    display: inline-block;
+    float: right;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    background: #ff0000;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: #ddd;
+}

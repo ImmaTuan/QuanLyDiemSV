@@ -58,4 +58,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Group_detail::class, 'user_id');
     }
+    public function profile()
+{
+    return $this->hasOne(UserProfile::class);
+}
+
 }

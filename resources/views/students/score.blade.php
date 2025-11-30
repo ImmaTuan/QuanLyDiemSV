@@ -7,8 +7,8 @@
 </head>
 <body>
     <div class="panel-container">
+    <a href="{{ route('panel') }}" class="back-btn">Quay lại</a>
         <h2>Điểm của {{ $user->name }}</h2>
-
         <table border="1" cellpadding="8" cellspacing="0">
             <thead>
                 <tr>
@@ -51,7 +51,6 @@
             </tbody>
         </table>
 
-        <a href="{{ route('panel') }}">← Quay lại</a>
     </div>
 </body>
 </html>

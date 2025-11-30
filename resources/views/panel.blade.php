@@ -46,9 +46,8 @@
         <div class="action-box">
             <h3>Chức năng</h3>
             <div class="btn-group">
-                <a href="#" class="btn">Xem nhóm</a>
                 <a href="{{ route('scores.index') }}" class="btn">Xem điểm</a>
-                <a href="#" class="btn">Cập nhật thông tin</a>
+                <a href="{{ route('show') }}" class="btn">Thông tin cá nhân</a>
             </div>
         </div>
     </div>

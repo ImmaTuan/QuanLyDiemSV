@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- ================================
      DANH SÁCH SINH VIÊN TRONG NHÓM
 ================================ -->
-<h2>Danh sách sinh viên trong nhóm</h2>
+<h2>Danh sách sinh viên</h2>
 @if (session('success'))
     <div class="alert alert-success">
         {{ session('success') }}

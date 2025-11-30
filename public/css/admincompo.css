@@ -42,7 +42,7 @@ h2 {
 }
 .back-btn {
     display: inline-block;
-    float: right;
+    /* float: right; */
     margin-bottom: 15px;
     color: #ffffff;
     font-weight: bold;

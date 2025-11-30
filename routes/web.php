@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminGroupController;
 use App\Http\Controllers\AdminSubjectController;
 use App\Http\Controllers\AdminTermController;
 use App\Http\Controllers\AdminAssignController;
+use App\Http\Controllers\UserProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ScoreController;
@@ -20,6 +21,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/scores/update/{id}', [ScoreController::class, 'update'])->name('scores.update');
     
 });
+Route::get('/profile', [UserProfileController::class, 'show'])->name('show');
+
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');
