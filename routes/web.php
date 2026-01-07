@@ -38,6 +38,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
     Route::get('/admin/groups', [AdminGroupController::class, 'index'])->name('admin.groups');
     Route::post('/admin/groups/add-student', [AdminGroupController::class, 'addStudent'])->name('admin.groups.addStudent');
+    Route::post('/admin/groups/import-file', [AdminGroupController::class, 'import'])->name('admin.groups.import');
     Route::delete('/admin/groups/delete/{id}', [AdminGroupController::class, 'delete'])->name('admin.groups.delete');
     Route::put('/admin/groups/{id}/update', [AdminGroupController::class, 'update'])->name('admin.groups.update');
 

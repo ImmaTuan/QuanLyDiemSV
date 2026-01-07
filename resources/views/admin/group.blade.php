@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <tr>
         <th>Môn</th>
         <th>Nhóm</th>
+        <th>Mã Sinh viên</th>
         <th>Sinh viên</th>
         <th>Hành động</th>
     </tr>
@@ -118,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <tr>
             <td>{{ $d->group->subject->tenMh }} ({{ $d->group->subject->maMh }})</td>
             <td>{{ $d->group->tenNhom }}</td>
+            <td>{{ $d->student->userId }}</td>
             <td>{{ $d->student->name }}</td>
 
             <td>
